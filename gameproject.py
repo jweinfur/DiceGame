@@ -11,11 +11,15 @@ def DiceRoll():
 	Dice5 = random.randint(1, 12)
 	Dice6 = random.randint (1, 6)
 	DoubleDice1 = (((Dice1 + Dice2)*2) + Dice3)
-	DoubleDice2 = (((Dice4 + Dice5)*2) + Dice6)
+	DoubleDice2 = (((Dice1 + Dice3)*2) + Dice2)
+	DoubleDice3 = (((Dice2 + Dice3)*2) + Dice1)
+	DoubleDice4 = (((Dice4 + Dice5)*2) + Dice6)
+	DoubleDice5 = (((Dice4 + Dice6)*2) + Dice5)
+	DoubleDice6 = (((Dice5 + Dice6)*2) + Dice4)
 	TripleDice1 = ((Dice1 + Dice2 +Dice3) * 3)
 	TripleDice2 = ((Dice4 + Dice5 +Dice6) * 3)
-	Score1 = (Dice1 + Dice2)
-	Score2 = (Dice3 + Dice4)
+	Score1 = (Dice1 + Dice2 + Dice3)
+	Score2 = (Dice4 + Dice5 + Dice6)
 	print("Player 1, Roll?")
 	Roll = input("Y/N?")
 	if Roll =="y":
@@ -28,7 +32,13 @@ def DiceRoll():
 	Score1 = (Dice1 + Dice2 + Dice3)
 	print(Score1)
 	if Dice1 == Dice2:
-		Score1 = DoubleDice
+		Score1 = DoubleDice1
+		print(Score1)
+	if Dice1 ==Dice3:
+		Score1 = DoubleDice2
+		print(Score1)
+	if Dice2 == Dice3:
+		Score1 = DoubleDice3
 		print(Score1)
 	if Dice1 == Dice2 ==Dice3:
 		Score1 = TripleDice1
@@ -47,7 +57,13 @@ def DiceRoll():
 	Score2 = (Dice4 + Dice5 + Dice6)
 	print(Score2)
 	if Dice4 == Dice5:
-		Score2 = DoubleDice2
+		Score2 = DoubleDice4
+		print(Score2)
+	if Dice4 == Dice6:
+		Score2 = DoubleDice5
+		print(Score2)
+	if Dice5 == Dice6:
+		Score2 = DoubleDice6
 		print(Score2)
 	if Dice4 == Dice5 ==Dice6:
 		Score2 = TripleDice2
