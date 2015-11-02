@@ -43,7 +43,8 @@ def DiceRoll():
 	if Dice1 == Dice2 ==Dice3:
 		Score1 = TripleDice1
 		print(Score1)
-	
+	print("""	
+			""")
 	
 	print("Player 2, Roll?")
 	Roll2 = input("Y/N?")
@@ -68,7 +69,8 @@ def DiceRoll():
 	if Dice4 == Dice5 ==Dice6:
 		Score2 = TripleDice2
 		print(Score2)
-	
+	print("""	
+			""")
 	if Score1 > Score2:
 		print("Player 1:", Score1, "Player 2:", Score2)
 		print("Player 1 Wins!")
@@ -85,8 +87,11 @@ def DiceRoll():
 print(""" ____  _____  __    __      ____  _   _  ____    ____  ____  ___  ____ 
 (  _ \(  _  )(  )  (  )    (_  _)( )_( )( ___)  (  _ \(_  _)/ __)( ___)
  )   / )(_)(  )(__  )(__     )(   ) _ (  )__)    )(_) )_)(_( (__  )__) 
-(_)\_)(_____)(____)(____)   (__) (_) (_)(____)  (____/(____)\___)(____)""")		
-print("Would you like to play dice?")
+(_)\_)(_____)(____)(____)   (__) (_) (_)(____)  (____/(____)\___)(____)""")
+print("""	
+				""")
+		
+print("Would you like to roll the dice?")
 Dice = input ("Y/N?")
 if Dice == "n":
 	print("Goodbye!")
@@ -94,5 +99,16 @@ if Dice == "n":
 	sys.exit(0)
 elif Dice =="y":
 	print("Let's play!")
+	time.sleep(2)
+print("""	
+			""")
 	
+print("""Rules:
+1. Each player rolls 3 dice.
+2. Total the score by adding all the dice together
+3. If a player rolls two of the same number, add those two dice together and
+ multiply by 2 and then add the third die to the total
+4. Player with the highest score wins""")
+print("""	
+			""")
 DiceRoll()
