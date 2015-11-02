@@ -82,10 +82,16 @@ def DiceRoll():
 	
 	
 
-print(""" ____  _____  __    __      ____  _   _  ____    ____  ____  ___  ____ 
-(  _ \(  _  )(  )  (  )    (_  _)( )_( )( ___)  (  _ \(_  _)/ __)( ___)
- )   / )(_)(  )(__  )(__     )(   ) _ (  )__)    )(_) )_)(_( (__  )__) 
-(_)\_)(_____)(____)(____)   (__) (_) (_)(____)  (____/(____)\___)(____)""")
+print("""                  d8,           d8b                  d8b   d8,              
+   d8P            `8P            88P                  88P  `8P               
+d888888P                        d88                  d88                     
+  ?88'    88bd88b  88b?88,.d88b,888   d8888b     d888888    88b d8888b d8888b
+  88P     88P'  `  88P`?88'  ?88?88  d8b_,dP    d8P' ?88    88Pd8P' `Pd8b_,dP
+  88b    d88      d88   88b  d8P 88b 88b        88b  ,88b  d88 88b    88b    
+  `?8b  d88'     d88'   888888P'  88b`?888P'    `?88P'`88bd88' `?888P'`?888P'
+                        88P'                                                 
+                       d88                                                   
+                       ?8P             """)
 print("""	
 				""")
 		
@@ -93,11 +99,11 @@ print("Would you like to roll the dice?")
 Dice = input ("Y/N?")
 if Dice == "n":
 	print("Goodbye!")
-	time.sleep(2)
+	time.sleep(1)
 	sys.exit(0)
 elif Dice =="y":
 	print("Let's play!")
-	time.sleep(2)
+	time.sleep(1)
 print("""	
 			""")
 	
