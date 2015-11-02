@@ -28,20 +28,21 @@ def DiceRoll():
 		time.sleep(2)
 		sys.exit(0)
 	print(Dice1, Dice2, Dice3)
-	Score1 = (Dice1 + Dice2 + Dice3)
-	print(Score1)
+	Score1 = Dice1 + Dice2 + Dice3
 	if Dice1 == Dice2:
 		Score1 = DoubleDice1
 		print(Score1)
-	if Dice1 ==Dice3:
+	elif Dice1 ==Dice3:
 		Score1 = DoubleDice2
 		print(Score1)
-	if Dice2 == Dice3:
+	elif Dice2 == Dice3:
 		Score1 = DoubleDice3
 		print(Score1)
-	if Dice1 == Dice2 ==Dice3:
+	elif Dice1 == Dice2 ==Dice3:
 		Score1 = TripleDice1
 		print(Score1)
+	else:
+		print(Dice1 + Dice2 + Dice3)
 	print("""	
 			""")
 	
@@ -55,19 +56,20 @@ def DiceRoll():
 		sys.exit(0)
 	print(Dice4, Dice5, Dice6)
 	Score2 = (Dice4 + Dice5 + Dice6)
-	print(Score2)
 	if Dice4 == Dice5:
 		Score2 = DoubleDice4
 		print(Score2)
-	if Dice4 == Dice6:
+	elif Dice4 == Dice6:
 		Score2 = DoubleDice5
 		print(Score2)
-	if Dice5 == Dice6:
+	elif Dice5 == Dice6:
 		Score2 = DoubleDice6
 		print(Score2)
-	if Dice4 == Dice5 ==Dice6:
+	elif Dice4 == Dice5 ==Dice6:
 		Score2 = TripleDice2
 		print(Score2)
+	else:
+		print(Dice4 + Dice5 + Dice6)
 	print("""	
 			""")
 	if Score1 > Score2:
