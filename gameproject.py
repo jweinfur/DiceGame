@@ -18,8 +18,7 @@ def DiceRoll():
 	DoubleDice6 = (((Dice5 + Dice6)*2) + Dice4)
 	TripleDice1 = ((Dice1 + Dice2 +Dice3) * 3)
 	TripleDice2 = ((Dice4 + Dice5 +Dice6) * 3)
-	Score1 = (Dice1 + Dice2 + Dice3)
-	Score2 = (Dice4 + Dice5 + Dice6)
+	
 	print("Player 1, Roll?")
 	Roll = input("Y/N?")
 	if Roll =="y":
@@ -82,7 +81,6 @@ def DiceRoll():
 		print("Tie!")
 	
 	
-	
 
 print(""" ____  _____  __    __      ____  _   _  ____    ____  ____  ___  ____ 
 (  _ \(  _  )(  )  (  )    (_  _)( )_( )( ___)  (  _ \(_  _)/ __)( ___)
@@ -104,7 +102,7 @@ print("""
 			""")
 	
 print("""Rules:
-1. Each player rolls 3 dice.
+1. Each player rolls 3 dice. One 20-sided die, one 12-sided die, and one 6-sided die
 2. Total the score by adding all the dice together
 3. If a player rolls two of the same number, add those two dice together and
  multiply by 2 and then add the third die to the total
@@ -112,3 +110,21 @@ print("""Rules:
 print("""	
 			""")
 DiceRoll()
+print("""	
+			""")
+
+
+while True:
+	print("""	
+			""")
+	print("Would you like to play again?")
+	Replay = input("Y/N?")
+	if Replay == "y":
+		print("""	
+			""")
+		DiceRoll()
+		continue
+	if Replay == "n":
+		print("Goodbye!")
+		time.sleep(2)
+		sys.exit(0)
