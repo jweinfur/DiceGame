@@ -18,15 +18,19 @@ def DiceRoll():
 	DoubleDice6 = (((Dice5 + Dice6)*2) + Dice4)
 	TripleDice1 = ((Dice1 + Dice2 +Dice3) * 3)
 	TripleDice2 = ((Dice4 + Dice5 +Dice6) * 3)
-	
-	print("Player 1, Roll?")
-	Roll = input("Y/N?")
-	if Roll =="y":
-		print("Ok!")
-	if Roll == "n":
-		print("Goodbye!")
-		time.sleep(2)
-		sys.exit(0)
+	while True:	
+		print("Player 1, Roll?")
+		Roll = input("Y/N?")
+		if Roll =="y":
+			print("Ok!")
+			break
+		elif Roll == "n":
+			print("Player 1 forfeits!", "Player 2 wins!")
+			time.sleep(2)
+			sys.exit(0)
+		else:
+			print("Invalid input, please enter -y- or -n-")
+		continue
 	print("				")
 	print(Dice1, Dice2, Dice3)
 	Score1 = Dice1 + Dice2 + Dice3
@@ -46,15 +50,19 @@ def DiceRoll():
 		print(Dice1 + Dice2 + Dice3)
 	print("""	
 			""")
-	
-	print("Player 2, Roll?")
-	Roll2 = input("Y/N?")
-	if  Roll2 =="y":
-		print("Ok!")
-	if Roll2 == "n":
-		print("Goodbye!")
-		time.sleep(2)
-		sys.exit(0)
+	while True:	
+		print("Player 2, Roll?")
+		Roll2 = input("Y/N?")
+		if  Roll2 =="y":
+			print("Ok!")
+			break
+		if Roll2 == "n":
+			print("Player 2 forfeits!", "Player 1 wins!")
+			time.sleep(2)
+			sys.exit(0)
+		else:
+			print("Invalid input, please enter -y- or -n-")
+		continue
 	print("				")
 	print(Dice4, Dice5, Dice6)
 	Score2 = (Dice4 + Dice5 + Dice6)
@@ -84,33 +92,6 @@ def DiceRoll():
 		print("Player 1:", Score1, "Player 2:", Score2)
 		print("Tie!")
 	
-	Player1Wins = Score1 > Score2
-	Player2Wins = Score1 < Score2
-	Tie = Score1 == Score2
-	player1wincount = 0
-	player2wincount = 0
-	tiecount = 0
-	while Player1Wins:
-		player1wincount = player1wincount + 1
-		return(player1wincount)
-		print("Player 1 wins:", player1wincount)
-		print("Player 2 wins:", player2wincount)
-		print("Ties:", tiecount)
-		break
-	while Player2Wins:
-		player2wincount = player2wincount +1
-		return(player2wincount)
-		print("Player 1 wins:", player1wincount)
-		print("Player 2 wins:", player2wincount)
-		print("Ties:", tiecount)
-		break
-	while Tie:
-		tiecount = tiecount + 1
-		return(tiecount)
-		print("Player 1 wins:", player1wincount)
-		print("Player 2 wins:", player2wincount)
-		print("Ties:", tiecount)
-		break
 	
 
 print("""                  d8,           d8b                  d8b   d8,              
@@ -126,15 +107,22 @@ d888888P                        d88                  d88
 print("""	
 				""")
 		
-print("Would you like to roll the dice?")
-Dice = input ("Y/N?")
-if Dice == "n":
-	print("Goodbye!")
-	time.sleep(1)
-	sys.exit(0)
-elif Dice =="y":
-	print("Let's play!")
-	time.sleep(1)
+while True:
+	print("""		""")
+	print("Would you like to roll the dice?")
+	Dice = input ("Y/N?")
+	if Dice == "n":
+		print("Goodbye!")
+		time.sleep(1)
+		sys.exit(0)
+		break
+	elif Dice =="y":
+		print("Let's play!")
+		time.sleep(1)
+		break
+	else:
+		print("Invalid input, please enter -y- or -n-")
+	continue
 print("""	
 			""")
 	
@@ -157,8 +145,11 @@ while True:
 		print("""	
 			""")
 		DiceRoll()
-		continue
-	if Replay == "n":
+	elif Replay == "n":
 		print("Goodbye!")
 		time.sleep(2)
 		sys.exit(0)
+		break
+	else:
+		print("Invalid input, please enter -y- or -n-")
+	continue
