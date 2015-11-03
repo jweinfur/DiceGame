@@ -27,6 +27,7 @@ def DiceRoll():
 		print("Goodbye!")
 		time.sleep(2)
 		sys.exit(0)
+	print("				")
 	print(Dice1, Dice2, Dice3)
 	Score1 = Dice1 + Dice2 + Dice3
 	if Dice1 == Dice2:
@@ -54,6 +55,7 @@ def DiceRoll():
 		print("Goodbye!")
 		time.sleep(2)
 		sys.exit(0)
+	print("				")
 	print(Dice4, Dice5, Dice6)
 	Score2 = (Dice4 + Dice5 + Dice6)
 	if Dice4 == Dice5:
@@ -82,6 +84,33 @@ def DiceRoll():
 		print("Player 1:", Score1, "Player 2:", Score2)
 		print("Tie!")
 	
+	Player1Wins = Score1 > Score2
+	Player2Wins = Score1 < Score2
+	Tie = Score1 == Score2
+	player1wincount = 0
+	player2wincount = 0
+	tiecount = 0
+	while Player1Wins:
+		player1wincount = player1wincount + 1
+		print("Player 1 wins:", player1wincount)
+		print("Player 2 wins:", player2wincount)
+		print("Ties:", tiecount)
+		return(player1wincount)
+		break
+	while Player2Wins:
+		player2wincount = player2wincount +1
+		print("Player 1 wins:", player1wincount)
+		print("Player 2 wins:", player2wincount)
+		print("Ties:", tiecount)
+		return(player1wincount)
+		break
+	while Tie:
+		tiecount = tiecount + 1
+		print("Player 1 wins:", player1wincount)
+		print("Player 2 wins:", player2wincount)
+		print("Ties:", tiecount)
+		return(tiecount)
+		break
 	
 
 print("""                  d8,           d8b                  d8b   d8,              
@@ -118,10 +147,7 @@ print("""Rules:
 print("""	
 			""")
 DiceRoll()
-print("""	
-			""")
-
-
+print("		")
 while True:
 	print("""	
 			""")
