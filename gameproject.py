@@ -92,24 +92,24 @@ def DiceRoll():
 	tiecount = 0
 	while Player1Wins:
 		player1wincount = player1wincount + 1
+		return(player1wincount)
 		print("Player 1 wins:", player1wincount)
 		print("Player 2 wins:", player2wincount)
 		print("Ties:", tiecount)
-		return(player1wincount)
 		break
 	while Player2Wins:
 		player2wincount = player2wincount +1
+		return(player2wincount)
 		print("Player 1 wins:", player1wincount)
 		print("Player 2 wins:", player2wincount)
 		print("Ties:", tiecount)
-		return(player1wincount)
 		break
 	while Tie:
 		tiecount = tiecount + 1
+		return(tiecount)
 		print("Player 1 wins:", player1wincount)
 		print("Player 2 wins:", player2wincount)
 		print("Ties:", tiecount)
-		return(tiecount)
 		break
 	
 
